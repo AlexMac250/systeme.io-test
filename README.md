@@ -1,5 +1,6 @@
 ## Requirements
 
+* make
 * Docker
 * Docker-compose
 
