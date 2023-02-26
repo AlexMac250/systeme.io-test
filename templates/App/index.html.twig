@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="form-control mt-5">
+                {{ form(form) }}
+            </div>
+
+            {% if total is not null %}
+                <div class="form-control mt-3">
+                    <p>Product price: {{ product.price }} USD</p>
+                    <p>Tax: {{ product.price * tax.tax }} USD ({{ tax.tax * 100 }}%)</p>
+                    <h5>Total: {{ total ?? null }} USD</h5>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
